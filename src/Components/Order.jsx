@@ -7,8 +7,8 @@ const Order = () => {
     {
       id: "ORD12345",
       date: "2025-04-03",
-      customer: "Muhammad Badhusha",
-      email: "badhusha@example.com",
+      customer: "YourName",
+      email: "YourName@example.com",
       address: "Ernakulam, Kerala, India",
       status: "Processing",
       items: [
