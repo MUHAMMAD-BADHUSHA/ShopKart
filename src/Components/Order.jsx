@@ -45,7 +45,7 @@ const Order = () => {
     },
   ]);
 
-  const handleCancel = (id) => {
+  const handleCancel = () => {
     alert(`Order has been canceled.`);
   };
 
