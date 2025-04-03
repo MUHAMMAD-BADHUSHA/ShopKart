@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Payment = () => {
@@ -10,7 +10,7 @@ const Payment = () => {
     <div className="container my-5">
       <h2 className="text-center">Payment Details</h2>
       <form className="mt-4" onSubmit={handleSubmit}>
-        {/* Payment Method Selection */}
+      
         <div className="mb-3">
           <label className="form-label">Select Payment Method</label>
           <select className="form-select">

@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import Navbar from "./Navbar";
 import { Link } from "react-router-dom";
 
 const Order = () => {
-  const [orders, setOrders] = useState([
+  const orders =[
     {
       id: "ORD12345",
       date: "2025-04-03",
@@ -43,7 +43,7 @@ const Order = () => {
         
       ],
     },
-  ]);
+  ];
 
   const handleCancel = () => {
     alert(`Order has been canceled.`);
@@ -55,19 +55,19 @@ const Order = () => {
     <div className="container my-5 mt-5 pt-5">
         
       <h2 className="text-center">Your Orders</h2>
-      {orders.map((order) => (
-        <div className="card my-4 p-3 shadow" key={order.id}>
-          <h5>Order ID: {order.id}</h5>
-          <p><strong>Date:</strong> {order.date}</p>
-          <p><strong>Customer:</strong> {order.customer}</p>
-          <p><strong>Email:</strong> {order.email}</p>
-          <p><strong>Address:</strong> {order.address}</p>
-          <p><strong>Status:</strong> <span className="badge bg-warning">{order.status}</span></p>
+      {orders.map((value) => (
+        <div className="card my-4 p-3 shadow" key={value.id}>
+          <h5>Order ID: {value.id}</h5>
+          <p><strong>Date:</strong> {value.date}</p>
+          <p><strong>Customer:</strong> {value.customer}</p>
+          <p><strong>Email:</strong> {value.email}</p>
+          <p><strong>Address:</strong> {value.address}</p>
+          <p><strong>Status:</strong> <span className="badge bg-warning">{value.status}</span></p>
 
           <h6>Order Items:</h6>
           <ul className="list-group mb-3">
-            {order.items.map((item, index) => (
-              <li className="list-group-item d-flex justify-content-between" key={index}>
+            {value.items.map((item) => (
+              <li className="list-group-item d-flex justify-content-between">
               <img src={item.image} width={'50'} height={'50'} alt="" />  {item.name} - ${item.price}
               </li>
             ))}
